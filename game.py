@@ -4,6 +4,7 @@ import pygame
 import numpy as np
 from scipy.stats import truncnorm
 from sklearn.externals import joblib
+
 ########################################################################
 ######################  Pygame Init
 ########################################################################
@@ -19,6 +20,8 @@ from constants import *
 
 
 def getVIs(mean):
+    """returns a list of 60 ints from a truncated normal distribution"""
+
     X = truncnorm(-2,2,loc= mean,scale= mean*0.33)
     ready = False
     while ready is False:
@@ -29,9 +32,16 @@ def getVIs(mean):
             ready = True
 
 def plot_session(data,user,session):
+    """This is to save three plots as jpg.
+    
+    1.- Frequency of response over time.
+    2.- Ratio of response over time.
+    3.- Frequency of response over reinforcments.
+    """
     import matplotlib.pyplot as plt
     if not os.path.exists(r'data\{0}\session_{1}'.format(user,session)):
                 os.makedirs(r'data\{0}\session_{1}'.format(user,session))
+
     ###### FREQUENCY OF RESPONSE OVER TIME
     ######
     
@@ -128,6 +138,8 @@ def plot_session(data,user,session):
     plt.savefig('data/{0}/session_{1}/freq_by_reinf_{1}.jpg'.format(user,session))
   
 def print_text(texto,x,y,fontsize,color = (0,255,0), font ='futura'):
+	"""This prints text through pygame display"""
+	
 	marcador=pygame.font.Font(r'.\fonts\{0}.ttf'.format(font),fontsize)
 	tsuper=marcador.render(texto,True,color)
 	trect= tsuper.get_rect()
@@ -135,6 +147,7 @@ def print_text(texto,x,y,fontsize,color = (0,255,0), font ='futura'):
 	disp.blit(tsuper,trect)
 
 def opening():
+    """This is the opening scene, returns the user name."""
     beep()
     name = ''
     getting = True
@@ -166,15 +179,26 @@ def opening():
     return name
 
 def intro():
+    """ Simple intro """
     disp.blit(intbg2,(0,0))
     pygame.display.update()
     boop()
     
 def selection():
+    """Selects the mean seconds for reinforcement, returns 2 lists with 60 ints.
+    
+    There are four different means:
+    
+    Pigeon mean       : Original mean from the Herrstein experiment, 90 seconds.
+    Thinker mean      : 60 seconds.
+    Normal people mean: 45 seconds.
+    ADHD people mean  : 23 seconds.
+    """
     sel_screen = True
     ch_sound.play()
     
     while sel_screen is True:
+	
         disp.blit(bachoo,(0,0))
         disp.blit(niveles,(0,0))
         mouse=pygame.mouse.get_pos()
@@ -188,7 +212,7 @@ def selection():
                 disp.blit(botpig,(0,0))
                 if tit[0] == 1:
                     ch_sound.stop()
-                    mean = 180
+                    mean = 90
                     ONIN.play()
                     time.sleep(2)
                     sel_screen = False
@@ -197,7 +221,7 @@ def selection():
                 disp.blit(botpen,(0,0))
                 if tit[0] == 1:
                     ch_sound.stop()
-                    mean = 90        
+                    mean = 60        
                     ONIN.play()
                     time.sleep(2)
                     sel_screen = False
@@ -221,7 +245,8 @@ def selection():
                     sel_screen = False
             pygame.display.update()
 
-    
+    # This create the time for the onset of each reinforcer
+    # The four diferent ratios for the programs are taken directly from Herrstain (1961)
     programs = [ [1,1], [0.75,1.5], [0.6,3], [0.5,0] ]
     pr = programs[np.random.choice(4)]
     pr = [ getVIs(mean*pr[0]), getVIs(mean*pr[1]) ]
@@ -232,7 +257,8 @@ def selection():
     return left_key, right_key
 
 def Session(left,right,user):
-    
+    """Main simulation loop, saves a list (as .pkl) with session data as dictionary."""
+
     session = {
         'total_time' : 0,
         'total_reinf_left' : 0,
@@ -368,6 +394,8 @@ def Session(left,right,user):
                 disp.blit(p5,(x-80,y))
 
         if len(session['earn_right'])+len(session['earn_left']) >= 60:
+	    # This is the outro of the Session, appends the current session to the user data file.
+	
             session['total_time'] = time_elapsed
             session['total_reinf_left'] = len(session['earn_left'])
             session['total_reinf_right']= len(session['earn_right'])
