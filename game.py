@@ -257,7 +257,7 @@ def selection():
     return left_key, right_key
 
 def Session(left,right,user):
-    """Main simulation loop, saves a list (as .pkl) with session data as dictionary."""
+    """Main simulation loop, returns a list (as .pkl) with session data as dictionary."""
 
     session = {
         'total_time' : 0,
