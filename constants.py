@@ -102,7 +102,3 @@ bder    = pygame.image.load(r'.\img\bder.png')
 off_p   = pygame.image.load(r'.\img\off_p.png')
 pygame.display.set_icon(iconin)
 os.system('cls')
-
-########################################################################
-######################  FUNCTIONS
-########################################################################
