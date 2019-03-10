@@ -125,7 +125,7 @@ def plot_session(data,user,session):
     for a in data['earn_right']:
         r_res_r.append(len([x for x in data['right_click'] if x< a]))
 
-    plt.title('left: VI-{0}   VI-{1}: right\nrat: {2}, Session: {3}'.format(
+    plt.title('left: VI-{0}   VI-{1}: right\npigeon: {2}, Session: {3}'.format(
         int(np.mean(data['left'])),
         int(np.mean(data['right'])),
         user,session))
