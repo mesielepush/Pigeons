@@ -17,13 +17,13 @@ And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fant
 
 
 ## Experimental Desing
+![game caption](https://github.com/mesielepush/Pigeons/blob/master/img/for_readmd.png)
 
 There is four posible ![concurrent](https://en.wikipedia.org/wiki/Reinforcement#Concurrent_schedules) ![variable interval schedules](https://dictionary.apa.org/variable-interval-schedule), all of wich have a constant mean of 1.5 min.
 
-* VI(3)    - VI(3)
-* VI(2.25) - VI(4.5)
-* VI(1.8)  - VI(9)
-* VI(1.5)  - VI(90)
+* VI(3)----- VI(3)
+* VI(2.25)-- VI(4.5)
+* VI(1.8)--- VI(9)
+* VI(1.5)--- VI(90)
 
-
-![game caption](https://github.com/mesielepush/Pigeons/blob/master/img/for_readmd.png)
+Each Session one is choose at random, then each VI is assing randomly to the left and right keys.
