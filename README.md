@@ -19,11 +19,14 @@ And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fant
 ## Experimental Desing
 ![game caption](https://github.com/mesielepush/Pigeons/blob/master/img/for_readmd.png)
 
-There is four posible ![concurrent](https://en.wikipedia.org/wiki/Reinforcement#Concurrent_schedules) ![variable interval schedules](https://dictionary.apa.org/variable-interval-schedule), all of wich have a constant mean of 1.5 min.
+This simulation begins with four posible ![concurrent](https://en.wikipedia.org/wiki/Reinforcement#Concurrent_schedules) ![variable interval (VI) schedules](https://dictionary.apa.org/variable-interval-schedule), all of wich have a constant mean of 1.5 min per renforcement, as in the original paper.
 
 * VI(3)----- VI(3)
 * VI(2.25)-- VI(4.5)
 * VI(1.8)--- VI(9)
-* VI(1.5)--- VI(90)
+* VI(1.5)--- VI(0)
 
-Each Session one is choose at random, then each VI is assing randomly to the left and right keys.
+However, a mean of 60 seconds per reinforcement could be too much for humans, so there are three alternative options with means of: 60, 45 and 23 seconds. Naturally the proportion between the VIs of each schedule is held constant for all alternatives.
+
+At the begining of each Session, the user chooses either the original mean or one of the alternatives.
+The program selects a schedule at random, and assaings each VI to the left and right keys also at random.
