@@ -6,9 +6,8 @@ This is a simulation of an experimental desing by Richard Herrstein.
     Journal of the experimental analysis of behavior, 4(3), 267-72. 
 
 ## Experimental Desing
-The paper verses around the theory of choice, it hypothesys the frequency of response as a dependent variable of frequency of reinforcement.
+The study rest on the early theory of choice in the realm of Behaviour Analisys, it hypothesys the relative frequency of response as a dependent variable of frequency of reinforcement.
 It is ussually taken as the beggining for the development of what is call the Matching Law.
-
 And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fantino.
 
     Fantino, E., & Romanowich, P. (2007).
