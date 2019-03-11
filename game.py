@@ -26,7 +26,6 @@ def getVIs(mean):
     ready = False
     while ready is False:
         x=[int(x) for x in X.rvs(60)]
-        print(np.mean(x))
         if (mean-0.1) <np.mean(x)< (mean+0.3):
             return(x)
             ready = True
