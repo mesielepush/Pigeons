@@ -5,11 +5,9 @@ This is a simulation of an experimental desing by Richard Herrstein.
     Relative and absolute strength of response as a function of frequency of reinforcement.
     Journal of the experimental analysis of behavior, 4(3), 267-72. 
 
-The paper rest on the early theory of choice in the realm of Behaviour Analisys.
+The paper rest on the early theory of choice in the realm of Behaviour Analysis.
 
-It hypothesizes the relative frequency of response as a dependent variable to the frequency of reinforcement.
-It is ussually taken as the beggining for the development of what is call the Matching Law.
-And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fantino.
+It hypothesizes the relative frequency of response as a dependent variable to the frequency of reinforcement. It is usually taken as the beginning for the develop of what is call the Matching Law. And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fantino.
 
     Fantino, E., & Romanowich, P. (2007).
     The effect of conditioned reinforcement rate on choice: A review.
@@ -19,7 +17,7 @@ And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fant
 ## Experimental Desing
 ![game caption](https://github.com/mesielepush/Pigeons/blob/master/img/for_readmd.png)
 
-1.- This simulation begins with four posible ![concurrent >](https://en.wikipedia.org/wiki/Reinforcement#Concurrent_schedules) ![variable interval (VI) schedules](https://dictionary.apa.org/variable-interval-schedule), all of wich have a constant mean of 1.5 min per renforcement, as in the original paper.
+1.- This simulation begins with four possible ![concurrent >](https://en.wikipedia.org/wiki/Reinforcement#Concurrent_schedules) ![variable interval (VI) schedules](https://dictionary.apa.org/variable-interval-schedule), all of wich have a constant mean of 1.5 min per reinforcement, as in the original paper.
 
 * VI(3)----- VI(3)
 * VI(2.25)-- VI(4.5)
@@ -28,18 +26,18 @@ And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fant
 
 ##### However, since a mean of 90 seconds per reinforcement could be too much for humans, there are three alternative options with means of: 60, 45 and 23 seconds. Naturally the proportion between the VIs of each schedule is held constant for all alternatives.
 
-2.- The program selects a schedule at random, and assaings each VI to the left and right keys.
+2.- The program selects a schedule at random, and assigns each VI to the left and right keys.
 
 ![game caption example](https://github.com/mesielepush/Pigeons/blob/master/img/for_readmd2.png)
 
 3.- During the Session:
-* Once the time for next reinforcer has been reach, the second response to that key is reinforced.
+* Once the time for next reinforcer has been reach, the second response to that key will be reinforced.
 * The programs for each key are independent, an action on one does not produce any change on the other.
 * The Session ends when the subject has earn 60 reinforcers.
 
 4.- Hypothesis
 
-#### The relation between absolute rate of responding an the absolute rate of reinforcement is a linear function that passes trough the origin.
+#### The relation between absolute rate of responding and the absolute rate of reinforcement is a linear function that passes trough the origin.
 
 That implies a result like this.
 
