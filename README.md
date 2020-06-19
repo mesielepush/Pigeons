@@ -7,7 +7,7 @@ This is a simulation of an experimental desing by Richard Herrstein.
 
 The paper rest on the early theory of choice in the realm of Behaviour Analysis.
 
-It hypothesizes the relative frequency of response as a dependent variable to the frequency of reinforcement. It is usually taken as the beginning for the develop of what is call the Matching Law. And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fantino.
+It hypothesizes the relative frequency of response as a dependent variable to the frequency of reinforcement. It is usually taken as the beginning for the development of what is call the Matching Law. And it is in turn a precursor work for the Delay Reduction Theory by Edmund Fantino.
 
     Fantino, E., & Romanowich, P. (2007).
     The effect of conditioned reinforcement rate on choice: A review.
